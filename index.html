@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOPE: Helping Other People Everywhere | TAMS</title>
+  <meta name="description" content="HOPE is the largest student-led service club at TAMS: 18 volunteering committees, four blood drives a year, and the legendary HOPE Auction." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TAB BAR -->
+  <header class="bar">
+    <div class="wrap bar__in">
+      <button class="bar__logo" data-tab="home" aria-label="HOPE home">
+        <img src="assets/logo-kangaroo.png" alt="HOPE" />
+      </button>
+      <nav class="tabs" id="tabs">
+        <button class="tab-btn active" data-tab="home">Home</button>
+        <button class="tab-btn" data-tab="auction">HOPE Auction</button>
+        <button class="tab-btn" data-tab="blooddrives">Blood Drives</button>
+        <button class="tab-btn" data-tab="showcase">Service Showcase</button>
+        <button class="tab-btn" data-tab="committees">Committees</button>
+        <button class="tab-btn" data-tab="board">Board</button>
+        <button class="tab-btn tab-btn--cta" data-tab="join">Get Involved</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="view active" id="view-home">
+      <header class="chero">
+        <div class="chero__grid" id="heroCollage"></div>
+        <div class="chero__veil"></div>
+        <div class="wrap chero__in">
+          <span class="chero__badge">Helping Other People Everywhere at TAMS</span>
+          <h1>Serve your community, <i>have a blast</i> doing it.</h1>
+          <p class="chero__lead">We are HOPE, the biggest service club at TAMS and a whole herd of hopearoos.
+            Year-round volunteering across eighteen committees, four blood drives, and the one and only HOPE Auction.</p>
+          <div class="chero__cta">
+            <button class="btn btn--gold btn--lg" data-tab="committees">Explore committees</button>
+            <button class="btn btn--light btn--lg" data-tab="auction">See the Auction</button>
+          </div>
+        </div>
+        <div class="chero__stats"><div class="wrap" id="stats"></div></div>
+      </header>
+
+      <div class="marquee-wrap"><div class="marquee" id="marquee"></div></div>
+
+      <div class="wrap section" id="upcoming" style="padding-bottom:clamp(40px,6vw,64px)">
+        <div class="center rv" style="max-width:640px">
+          <span class="eyebrow">Mark your calendar</span>
+          <h2 class="h-sec">What's coming up</h2>
+        </div>
+        <div class="countdown rv" id="countdown"></div>
+      </div>
+
+      <div class="highlights">
+        <div class="hl hl--1"><b>11&times;</b><span>Best Social Event at TAMS</span><em>at the HOPE Auction</em></div>
+        <div class="hl hl--2"><b>$45,000</b><span>raised for Save the Children</span></div>
+        <div class="hl hl--3"><b>343</b><span>pints of blood collected</span></div>
+      </div>
+
+      <div class="wrap section">
+        <div class="center rv" style="max-width:700px">
+          <span class="eyebrow">What is HOPE?</span>
+          <h2 class="h-sec">One club, eighteen ways to give back</h2>
+          <p class="lead center" style="margin-top:14px">HOPE empowers students to lead and serve through volunteering.
+            By supporting both the TAMS community and those beyond campus, members grow as leaders while making a real impact.</p>
+        </div>
+        <div class="previews" id="previews"></div>
+      </div>
+    </section>
+
+    <!-- EVENT TABS (rendered by app.js) -->
+    <section class="view" id="view-auction"></section>
+    <section class="view" id="view-blooddrives"></section>
+    <section class="view" id="view-showcase"></section>
+
+    <!-- COMMITTEES -->
+    <section class="view" id="view-committees">
+      <div class="wrap section">
+        <div class="center" style="max-width:660px">
+          <span class="eyebrow">Find your people</span>
+          <h2 class="h-sec">Eighteen committees, one for every cause</h2>
+          <p class="lead center" style="margin-top:12px">Pick a committee (or honestly, a few) and rack up hours with your friends. Tap a tag to filter by what you are into.</p>
+        </div>
+        <div class="filters" id="filters" style="margin-top:30px"></div>
+        <div class="cgrid" id="committeeGrid"></div>
+      </div>
+    </section>
+
+    <!-- BOARD -->
+    <section class="view" id="view-board">
+      <div class="wrap section">
+        <div class="center" style="max-width:640px">
+          <span class="eyebrow">Meet the herd</span>
+          <h2 class="h-sec">The hopearoos in charge</h2>
+          <p class="lead center" style="margin-top:12px">The crew keeping it all hopping. Come say hi, they would genuinely love to meet you.</p>
+        </div>
+        <div class="bgrid" id="boardGrid" style="margin-top:40px"></div>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section class="view" id="view-join">
+      <div class="wrap section">
+        <div class="join-hero">
+          <span class="eyebrow">Get involved</span>
+          <h2>Ready to make an impact?</h2>
+          <p>Hop in, we cannot wait to meet you, hopearoo.</p>
+          <div class="steps">
+            <div class="step"><b>1</b><span>Come to a general meeting in McConnell</span></div>
+            <div class="step"><b>2</b><span>Join a committee that fits your cause</span></div>
+            <div class="step"><b>3</b><span>Show up, give back and rack up hours</span></div>
+          </div>
+          <div class="join-cta">
+            <a class="btn btn--gold" href="https://www.facebook.com/share/g/1BbyrRNjrS/" target="_blank" rel="noopener">Join our Facebook group</a>
+            <a class="btn btn--light" href="https://www.instagram.com/thehopevlog/" target="_blank" rel="noopener">Follow @thehopevlog</a>
+            <a class="btn btn--light" href="mailto:thehopeexecs@gmail.com">Email the execs</a>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="col"><h5>Explore</h5>
+            <a data-tab="auction">HOPE Auction</a><a data-tab="blooddrives">Blood Drives</a>
+            <a data-tab="showcase">Service Showcase</a><a data-tab="committees">Committees</a></div>
+          <div class="col"><h5>Get in touch</h5>
+            <a href="mailto:thehopeexecs@gmail.com">thehopeexecs@gmail.com</a>
+            <a href="https://www.instagram.com/thehopevlog/" target="_blank" rel="noopener">Instagram @thehopevlog</a>
+            <a href="https://www.facebook.com/share/g/1BbyrRNjrS/" target="_blank" rel="noopener">Facebook group</a>
+            <a href="https://tams.club/clubs" target="_blank" rel="noopener">tams.club</a></div>
+          <div class="col"><h5>Where</h5>
+            <p>McConnell Hall</p><p>TAMS &middot; UNT</p><p>Denton, TX</p></div>
+        </div>
+
+        <div class="foot wrap" style="width:auto">
+          <span>© <span id="year"></span> HOPE · Texas Academy of Mathematics &amp; Science</span>
+          <span>Made with care by the herd</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lb" id="lb" aria-hidden="true">
+    <button class="lb__btn lb__close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb__btn lb__prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" src="" alt="" />
+    <button class="lb__btn lb__next" id="lbNext" aria-label="Next">›</button>
+    <div class="lb__count" id="lbCount"></div>
+  </div>
+
+  <script src="data.js?v=13"></script>
+  <script src="assets/gallery/manifest.js?v=13"></script>
+  <script src="app.js?v=13"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+==================================================
+  HOPE WEBSITE — WHERE TO PUT PHOTOS & VIDEO
+==================================================
+
+Just drag image files into these folders (inside the hope-website folder).
+You can add as many as you want. JPG or PNG both work.
+
+GALLERIES (show up as collages on each tab)
+-------------------------------------------------
+  assets/gallery/auction/       -> HOPE Auction photos
+  assets/gallery/blooddrives/   -> Blood Drive photos
+  assets/gallery/showcase/      -> Service Showcase photos
+
+After you add photos to ANY gallery folder, run this once in Terminal:
+
+    cd ~/hope-website
+    python3 gen-gallery.py
+
+That makes the new photos show up. (If you cannot run it, just tell me and I will.)
+
+MAIN PHOTO for a tab (the big one at the top):
+  The first photo by name becomes the header. To force one, rename it so it
+  sorts first, e.g.  00-main.jpg
+  (Tell me which auction photo is the green-dresses group and I will set it.)
+
+
+BOARD PHOTOS — each exec has a CAROUSEL (multiple photos)
+-------------------------------------------------
+Each exec has their own folder. Drop as many photos as you want in it,
+they become a swipeable carousel on their card. Name them 01.jpg, 02.jpg, ...
+(01 shows first). Right now each folder has the real headshot + a few
+"add a photo" placeholders you can delete/replace.
+
+  assets/board/ananya/     assets/board/anush/     assets/board/sahana/
+  assets/board/gurtaj/     assets/board/camille/   assets/board/sarah/
+
+After adding board photos, run:  python3 gen-gallery.py
+
+
+COMMITTEE PHOTOS (optional, one per committee)
+-------------------------------------------------
+  assets/committees/
+Name each file after the committee, all lowercase with dashes:
+  reading-buddies.jpg        hoofbeats.jpg            shiloh-fields.jpg
+  denton-nursing-home.jpg    high-school-tutoring.jpg library-committee.jpg
+  food-for-thought.jpg       revive.jpg               little-leaps.jpg
+  teen-court.jpg             community-impact-through-art.jpg
+  english-for-everyone.jpg   finance-for-all.jpg      game-on.jpg
+  global-virtual-school.jpg  hospitals-for-hope.jpg   project-pulmonary.jpg
+  elm-fork.jpg
+(If a committee has no photo, it falls back to the default automatically.)
+
+
+VIDEO (plays on the HOPE Auction tab)
+-------------------------------------------------
+  assets/video/
+Put your clip here named:  auction-clip.mp4
+If you only have a .mov, drop it in as auction-clip.mov and tell me,
+I will convert it to mp4 so it plays in every browser.
+(The clip you sent lives in the Messages folder, which the Mac blocks me from
+ reading, so please copy it into this folder.)
+
+
+NOTE: I cannot pull photos out of our chat, only files that are on your
+computer in these folders. So dropping them here is the way. Thanks!
