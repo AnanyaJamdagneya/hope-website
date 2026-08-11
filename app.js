@@ -79,8 +79,9 @@
     }).join('') + '</div>';
 
     var focus = (D.mainFocus && D.mainFocus[e.key]) || 'center 35%';
+    var heroStyle = e.key === 'blooddrives' ? ' style="min-height:clamp(520px,84vh,880px)"' : '';
     view.innerHTML =
-      '<div class="ev-hero"><img src="' + main + '" alt="' + e.title + '" style="object-position:' + focus + '">' +
+      '<div class="ev-hero"' + heroStyle + '><img src="' + main + '" alt="' + e.title + '" style="object-position:' + focus + '">' +
         '<div class="ev-hero__o"></div>' +
         '<div class="ev-hero__c wrap" style="width:auto"><span class="tag">' + e.tag + '</span>' +
           '<h1>' + e.title + '</h1><div class="facts">' + facts + '</div></div></div>' +

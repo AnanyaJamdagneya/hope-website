@@ -13,7 +13,7 @@ window.HOPE_DATA = {
   // How each header image is cropped (CSS object-position) so faces aren't cut off.
   mainFocus: {
     auction: 'center 45%',
-    blooddrives: 'center 26%',
+    blooddrives: 'center 42%',
     showcase: 'center 74%',
   },
 
