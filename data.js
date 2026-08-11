@@ -14,7 +14,7 @@ window.HOPE_DATA = {
   mainFocus: {
     auction: 'center 45%',
     blooddrives: 'center 42%',
-    showcase: 'center 74%',
+    showcase: 'center 82%',
   },
 
   stats: [
